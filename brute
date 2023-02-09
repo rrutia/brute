@@ -1,0 +1,34 @@
+import lief
+from tqdm import tqdm
+
+# the password list path you want to use, must be available in the current directory
+wordlist = "rockyou.txt"
+
+# the ELF file you want to crack its password
+elf_file = "vault.o"
+
+
+# count the number of words in this wordlist
+n_words = len(list(open(wordlist, "rb")))
+
+# print the total number of passwords
+print("Total passwords to test:", n_words)
+
+
+with open(wordlist, "rb") as wordlist:
+    for word in tqdm(wordlist, total=n_words, unit="word"):
+        try:
+            # Load the ELF file with lief
+            binary = lief.ELF.parse(elf_file)
+
+            # Modify the binary using the password
+            binary.modify(word.strip())
+
+            # Write the binary to disk
+            binary.write("vault_unlocked.elf")
+        except:
+            continue
+        else:
+            print("[+] Password found:", word.decode().strip())
+            exit(0)
+print("[!] Password not found, try other wordlist.")
