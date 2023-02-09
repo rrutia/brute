@@ -14,8 +14,8 @@ Installation
 
 Explanation
 -----------
-     -brute.py - python script to execute, 
-     -rockyou.txt - dictionary file, 
+     -brute.py - python script to execute
+     -rockyou.txt - dictionary file
      -vault.o - elf file password protected
 
 
