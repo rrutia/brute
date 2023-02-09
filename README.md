@@ -12,6 +12,14 @@ Copy all the files to a local folder
 -vault.o
 
 
+Explanation
+-----------
+-brute.py - python script to execute
+-rockyou.txt - dictionary file
+-vault.o - elf file password protected
+
+
+
 Example usage and output
 ------------------------
 $python3.10 brute.py vault.o
