@@ -7,16 +7,16 @@ This is a python script that will try to use a dictionary file to try to guess t
 Installation
 ------------
 Copy all the files to a local folder
--brute.py
--rockyou.txt
--vault.o
+     -brute.py
+     -rockyou.txt
+     -vault.o
 
 
 Explanation
 -----------
--brute.py - python script to execute
--rockyou.txt - dictionary file
--vault.o - elf file password protected
+     -brute.py - python script to execute, 
+     -rockyou.txt - dictionary file, 
+     -vault.o - elf file password protected
 
 
 
