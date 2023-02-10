@@ -1,7 +1,7 @@
 import lief
 from tqdm import tqdm
 
-# the password list path you want to use, must be available in the current directory
+# use a password list, must be available in the current directory
 wordlist = "rockyou.txt"
 
 # the ELF file you want to crack its password
